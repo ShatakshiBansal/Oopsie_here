@@ -78,118 +78,118 @@ class CourseClass:
         self.CourseTable.bind("<ButtonRelease-1>",self.get_data)
         self.show()
 
-def search(self):
-    con=sqlite3.connect(database="rms.db")
-    cur=con.cursor()
-    try:
-        cur.execute(f"select * from course where name LIKE '%{self.var_search.get()}%'")
-        rows=cur.fetchall()
-        self.CourseTable.delete(*self.CourseTable.get_children())
-        for row in rows:
-            self.CourseTable.insert('',END,values=row)
-    except Exception as ex:
-        messagebox. showerror ("Error",f"Error due to {str(ex)}")
+    def search(self):
+        con=sqlite3.connect(database="rms.db")
+        cur=con.cursor()
+        try:
+            cur.execute(f"select * from course where name LIKE '%{self.var_search.get()}%'")
+            rows=cur.fetchall()
+            self.CourseTable.delete(*self.CourseTable.get_children())
+            for row in rows:
+                self.CourseTable.insert('',END,values=row)
+        except Exception as ex:
+            messagebox. showerror ("Error",f"Error due to {str(ex)}")
 
 
-def clear(self):
-    self.var_course.set("")
-    self.var_duration.set("")
-    self.var_charges.set("")
-    self.var_search.set("")
-    self.txt_description.delete('1.0',END)
-    self.txt_courseName.config(state=NORMAL)
-    self.txt_courseName
+    def clear(self):
+        self.var_course.set("")
+        self.var_duration.set("")
+        self.var_charges.set("")
+        self.var_search.set("")
+        self.txt_description.delete('1.0',END)
+        self.txt_courseName.config(state=NORMAL)
+        self.txt_courseName
 
-def delete(self):
-    con=sqlite3.connect(database="rms.db")
-    cur=con.cursor()
-    try:
-        if self.var_course.get()=="":
-            messagebox.showerror("Error", "Course Name is required",parent=self.root)
-        else:
-            cur.execute("select * from course where name=?",(self.var_course.get(),))
-            row=cur.fetchone()
-            if row==None:
-                messagebox.showerror("Error","please select course from the list",parent=self.root)
+    def delete(self):
+        con=sqlite3.connect(database="rms.db")
+        cur=con.cursor()
+        try:
+            if self.var_course.get()=="":
+                messagebox.showerror("Error", "Course Name is required",parent=self.root)
             else:
-                op=messagebox.askyesno("confirm","Do you really want to delete the course",parent=self.root)
-                if op==True:
-                    cur.execute("delete from course where name=?",(self.var_course.get(),))
-                    cur.commit()
-                    messagebox.showinfo("Delete","course deleted successfully")
-                    self.clear()
-    except Exception as ex:
-        messagebox. showerror ("Error",f"Error due to {str(ex)}")
+                cur.execute("select * from course where name=?",(self.var_course.get(),))
+                row=cur.fetchone()
+                if row==None:
+                    messagebox.showerror("Error","please select course from the list",parent=self.root)
+                else:
+                    op=messagebox.askyesno("confirm","Do you really want to delete the course",parent=self.root)
+                    if op==True:
+                        cur.execute("delete from course where name=?",(self.var_course.get(),))
+                        cur.commit()
+                        messagebox.showinfo("Delete","course deleted successfully")
+                        self.clear()
+        except Exception as ex:
+            messagebox. showerror ("Error",f"Error due to {str(ex)}")
 
-def get_data(self,ev):
-    self.txt_courseName.config(state="readonly")
-    self.txt_courseName
-    r=self.CourseTable.focus()
-    content=self.CourseTable.item(r)
-    row=content["values"]
-    self.var_course.set(row[1])
-    self.var_duration.set(row[2])
-    self.var_charges.set(row[3])
-    self.txt_description.delete('1.0',END)
-    self.txt_description.insert(END,row[4])
+    def get_data(self,ev):
+        self.txt_courseName.config(state="readonly")
+        self.txt_courseName
+        r=self.CourseTable.focus()
+        content=self.CourseTable.item(r)
+        row=content["values"]
+        self.var_course.set(row[1])
+        self.var_duration.set(row[2])
+        self.var_charges.set(row[3])
+        self.txt_description.delete('1.0',END)
+        self.txt_description.insert(END,row[4])
 
-def add(self):
-    con=sqlite3.connect(database="rms.db")
-    cur=con.cursor()
-    try:
-        if self.var_course.get()=="":
-            messagebox.showerror("Error", "Course Name should be required",parent=self.root)
-        else:
-            cur.execute("select * from course where name=?",(self.var_course.get(),))
-            row=cur.fetchone()
-            if row!=None:
-                messagebox.showerror("Error","Course Name already present",parent=self.root)
+    def add(self):
+        con=sqlite3.connect(database="rms.db")
+        cur=con.cursor()
+        try:
+            if self.var_course.get()=="":
+                messagebox.showerror("Error", "Course Name should be required",parent=self.root)
             else:
-                cur.execute("insert into course (name,duration,charges,description) values(?,?,?,?)",(
-                    self.var_course.get(),
-                    self.var_duration.get(),
-                    self.var_charges.get(),
-                    self.txt_description.get("1.0",END)
-                ))
-                con.commit()
-                messagebox.showinfo("Success","course added successfully",parent=self.root)
-    except Exception as ex:
-        messagebox. showerror ("Error",f"Error due to {str(ex)}")
+                cur.execute("select * from course where name=?",(self.var_course.get(),))
+                row=cur.fetchone()
+                if row!=None:
+                    messagebox.showerror("Error","Course Name already present",parent=self.root)
+                else:
+                    cur.execute("insert into course (name,duration,charges,description) values(?,?,?,?)",(
+                        self.var_course.get(),
+                        self.var_duration.get(),
+                        self.var_charges.get(),
+                        self.txt_description.get("1.0",END)
+                    ))
+                    con.commit()
+                    messagebox.showinfo("Success","course added successfully",parent=self.root)
+        except Exception as ex:
+            messagebox. showerror ("Error",f"Error due to {str(ex)}")
 
-def update(self):
-    con=sqlite3.connect(database="rms.db")
-    cur=con.cursor()
-    try:
-        if self.var_course.get()=="":
-            messagebox.showerror("Error", "Course Name should be required",parent=self.root)
-        else:
-            cur.execute("select * from course where name=?",(self.var_course.get(),))
-            row=cur.fetchone()
-            if row==None:
-                messagebox.showerror("Error","select course from list",parent=self.root)
+    def update(self):
+        con=sqlite3.connect(database="rms.db")
+        cur=con.cursor()
+        try:
+            if self.var_course.get()=="":
+                messagebox.showerror("Error", "Course Name should be required",parent=self.root)
             else:
-                cur.execute("update course set duration=?,charges=?,description=? where name=?",(
-                    self.var_duration.get(),
-                    self.var_charges.get(),
-                    self.txt_description.get("1.0",END),
-                    self.var_course.get()
-                ))
-                con.commit()
-                messagebox.showinfo("Success","course updated successfully",parent=self.root)
-    except Exception as ex:
-        messagebox. showerror ("Error",f"Error due to {str(ex)}")
+                cur.execute("select * from course where name=?",(self.var_course.get(),))
+                row=cur.fetchone()
+                if row==None:
+                    messagebox.showerror("Error","select course from list",parent=self.root)
+                else:
+                    cur.execute("update course set duration=?,charges=?,description=? where name=?",(
+                        self.var_duration.get(),
+                        self.var_charges.get(),
+                        self.txt_description.get("1.0",END),
+                        self.var_course.get()
+                    ))
+                    con.commit()
+                    messagebox.showinfo("Success","course updated successfully",parent=self.root)
+        except Exception as ex:
+            messagebox. showerror ("Error",f"Error due to {str(ex)}")
 
-def show(self):
-    con=sqlite3.connect(database="rms.db")
-    cur=con.cursor()
-    try:
-        cur.execute("select * from course")
-        rows=cur.fetchall()
-        self.CourseTable.delete(*self.CourseTable.get_children())
-        for row in rows:
-            self.CourseTable.insert('',END,values=row)
-    except Exception as ex:
-        messagebox. showerror ("Error",f"Error due to {str(ex)}")
+    def show(self):
+        con=sqlite3.connect(database="rms.db")
+        cur=con.cursor()
+        try:
+            cur.execute("select * from course")
+            rows=cur.fetchall()
+            self.CourseTable.delete(*self.CourseTable.get_children())
+            for row in rows:
+                self.CourseTable.insert('',END,values=row)
+        except Exception as ex:
+            messagebox. showerror ("Error",f"Error due to {str(ex)}")
 
 if __name__ == "__main__":
     root = Tk()
