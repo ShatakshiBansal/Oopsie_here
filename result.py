@@ -119,4 +119,4 @@ class resultClass:
 if __name__=="__main__":
     root=Tk()
     obj=resultClass(root)
-    root.mainloop()    
+    root.mainloop()         
