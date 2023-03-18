@@ -11,7 +11,7 @@ class reportClass:
         self.root.focus_force()
 
         #===title===
-        title=Label(self.root,text="Final Report Details",font=("goudy old style",20,"bold"),bg="orange",fg="#262626").place(x=10,y=15,width=1180,height=50)
+        title=Label(self.root,text="Final Report Details",font=("goudy old style",17,"bold"),bg="orange",fg="#262626").place(x=10,y=15,width=1180,height=50)
         
         #======Search======
         self.var_search=StringVar()
@@ -23,12 +23,12 @@ class reportClass:
         btn_clear=Button(self.root,text='Clear',font=("goudy old style",15,"bold"),bg="gray",fg="white",cursor="hand2",command=self.clear).place(x=800,y=100,width=100,height=28)
              
         #=====labels=====
-        lbl_roll=Label(self.root,text="Roll No",font=("goudy old style",15,"bold"),bg="white",bd=2,relief=GROOVE).place(x=150,y=230,width=150,height=50)
-        lbl_roll=Label(self.root,text="Name",font=("goudy old style",15,"bold"),bg="white",bd=2,relief=GROOVE).place(x=300,y=230,width=150,height=50)
-        lbl_roll=Label(self.root,text="Course",font=("goudy old style",15,"bold"),bg="white",bd=2,relief=GROOVE).place(x=450,y=230,width=150,height=50)
-        lbl_roll=Label(self.root,text="Marks Obtained",font=("goudy old style",15,"bold"),bg="white",bd=2,relief=GROOVE).place(x=600,y=230,width=150,height=50)
-        lbl_roll=Label(self.root,text="Total Marks",font=("goudy old style",15,"bold"),bg="white",bd=2,relief=GROOVE).place(x=750,y=230,width=150,height=50)
-        lbl_roll=Label(self.root,text="Percentage",font=("goudy old style",15,"bold"),bg="white",bd=2,relief=GROOVE).place(x=900,y=230,width=150,height=50)
+        lbl_roll=Label(self.root,text="Roll No",font=("goudy old style",13,"bold"),bg="white",bd=2,relief=GROOVE).place(x=150,y=230,width=150,height=50)
+        lbl_roll=Label(self.root,text="Name",font=("goudy old style",13,"bold"),bg="white",bd=2,relief=GROOVE).place(x=300,y=230,width=150,height=50)
+        lbl_roll=Label(self.root,text="Course",font=("goudy old style",13,"bold"),bg="white",bd=2,relief=GROOVE).place(x=450,y=230,width=150,height=50)
+        lbl_roll=Label(self.root,text="Marks Obtained",font=("goudy old style",13,"bold"),bg="white",bd=2,relief=GROOVE).place(x=600,y=230,width=150,height=50)
+        lbl_roll=Label(self.root,text="Total Marks",font=("goudy old style",13,"bold"),bg="white",bd=2,relief=GROOVE).place(x=750,y=230,width=150,height=50)
+        lbl_roll=Label(self.root,text="Percentage",font=("goudy old style",13,"bold"),bg="white",bd=2,relief=GROOVE).place(x=900,y=230,width=150,height=50)
 
         self.roll=Label(self.root,font=("goudy old style",15,"bold"),bg="white",bd=2,relief=GROOVE)
         self.roll.place(x=150,y=280,width=150,height=50)
