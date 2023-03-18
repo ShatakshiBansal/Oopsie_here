@@ -11,8 +11,8 @@ class examClass:
         self.root.focus_force()
 
 ##TITLE
-        title = Label(self.root, text = "Student Exam Details", font = ("goudy old style", 20, "bold"), bg = "#9D3876", fg = "white").place(x = 10, y = 15, width = 1180, height = 35)
-        subjects = Label(self.root, text = "Enter subjects", font = ("goudy old style", 20, "bold"), bg = "#9370DB", fg = "white").place(x = 15, y = 240, width = 200, height = 30)
+        title = Label(self.root, text = "Student Exam Details", font = ("goudy old style", 20, "bold"), bg = "#8A360F", fg = "white").place(x = 10, y = 15, width = 1180, height = 35)
+        subjects = Label(self.root, text = "Enter subjects", font = ("goudy old style", 20, "bold"), bg = "#CD8C95", fg = "white").place(x = 15, y = 240, width = 200, height = 30)
 
 ##Variables
         self.var_roll = StringVar()
@@ -55,22 +55,22 @@ class examClass:
         self.txt_exam.place(x = 460, y = 180, width = 120)
         self.txt_exam.current(0)
 
-        lbl_sub1 = Label(self.root, text = "Subject 1", font = ("goudy old style", 15, "bold"), bg = "white").place(x = 25, y = 280)
+        lbl_sub1 = Label(self.root, text = "Subject 1", font = ("goudy old style", 12, "bold"), bg = "white").place(x = 25, y = 280)
         txt_sub1 = Entry(self.root, textvariable = self.var_sub1, font = ("goudy old style", 15, "bold"), bg = "#FAE6FA").place(x = 120, y = 280, width = 100)
 
-        lbl_sub2 = Label(self.root, text = "Subject 2", font = ("goudy old style", 15, "bold"), bg = "white").place(x = 255, y = 280)
+        lbl_sub2 = Label(self.root, text = "Subject 2", font = ("goudy old style", 12, "bold"), bg = "white").place(x = 255, y = 280)
         txt_sub2 = Entry(self.root, textvariable = self.var_sub2, font = ("goudy old style", 15, "bold"), bg = "#FAE6FA").place(x = 340, y = 280, width = 100)
 
-        lbl_sub3 = Label(self.root, text = "Subject 3", font = ("goudy old style", 15, "bold"), bg = "white").place(x = 475, y = 280)
+        lbl_sub3 = Label(self.root, text = "Subject 3", font = ("goudy old style", 12, "bold"), bg = "white").place(x = 475, y = 280)
         txt_sub3 = Entry(self.root, textvariable = self.var_sub3, font = ("goudy old style", 15, "bold"), bg = "#FAE6FA").place(x = 560, y = 280, width = 100)
 
-        lbl_sub4 = Label(self.root, text = "Subject 4", font = ("goudy old style", 15, "bold"), bg = "white").place(x = 25, y = 320)
+        lbl_sub4 = Label(self.root, text = "Subject 4", font = ("goudy old style", 12, "bold"), bg = "white").place(x = 25, y = 320)
         txt_sub4 = Entry(self.root, textvariable = self.var_sub4, font = ("goudy old style", 15, "bold"), bg = "#FAE6FA").place(x = 120, y = 320, width = 100)
 
-        lbl_sub5 = Label(self.root, text = "Subject 5", font = ("goudy old style", 15, "bold"), bg = "white").place(x = 255, y = 320)
+        lbl_sub5 = Label(self.root, text = "Subject 5", font = ("goudy old style", 12, "bold"), bg = "white").place(x = 255, y = 320)
         txt_sub5 = Entry(self.root, textvariable = self.var_sub5, font = ("goudy old style", 15, "bold"), bg = "#FAE6FA").place(x = 340, y = 320, width = 100)
 
-        lbl_sub6 = Label(self.root, text = "Subject 6", font = ("goudy old style", 15, "bold"), bg = "white").place(x = 475, y = 320)
+        lbl_sub6 = Label(self.root, text = "Subject 6", font = ("goudy old style", 12, "bold"), bg = "white").place(x = 475, y = 320)
         txt_sub6 = Entry(self.root, textvariable = self.var_sub6, font = ("goudy old style", 15, "bold"), bg = "#FAE6FA").place(x = 560, y = 320, width = 100)
         
 
