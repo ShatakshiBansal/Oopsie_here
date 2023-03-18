@@ -11,7 +11,7 @@ class courseClass:
         self.root.focus_force()
 
 ##TITLE
-        title = Label(self.root, text = "Manage Course Details", font = ("goudy old style", 20, "bold"), bg = "#9D3876", fg = "white").place(x = 10, y = 15, width = 1180, height = 35)
+        title = Label(self.root, text = "Manage Course Details", font = ("goudy old style", 20, "bold"), bg = "#8A360F", fg = "white").place(x = 10, y = 15, width = 1180, height = 35)
 
 ##Variables
         self.var_course = StringVar()
