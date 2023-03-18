@@ -30,16 +30,16 @@ class reportClass:
         self.subject_list=[]
         self.marks_list=[]
 
-        lbl_select=Label(self.root,text="Select Student",font=("goudy old style",13,"bold"),bg="teal").place(x=100,y=120,width=150)
-        lbl_name=Label(self.root,text="Name",font=("goudy old style",13,"bold"),bg="teal").place(x=100,y=160,width=150)
-        lbl_course=Label(self.root,text="Course",font=("goudy old style",13,"bold"),bg="teal").place(x=100,y=200,width=150)
-        lbl_branch=Label(self.root,text="Branch",font=("goudy old style",13,"bold"),bg="teal").place(x=100,y=240,width=150)
-        lbl_dob=Label(self.root,text="D.O.B",font=("goudy old style",13,"bold"),bg="teal").place(x=100,y=280,width=150)
-        lbl_mn=Label(self.root,text="Mother's Name",font=("goudy old style",13,"bold"),bg="teal").place(x=100,y=320,width=150)
-        lbl_pn=Label(self.root,text="Father's Name",font=("goudy old style",13,"bold"),bg="teal").place(x=100,y=360,width=150)
-        lbl_obt_marks=Label(self.root,text="Obtained Marks",font=("goudy old style",13,"bold"),bg="teal").place(x=100,y=400,width=150)
-        lbl_total_marks=Label(self.root,text="Total Marks",font=("goudy old style",13,"bold"),bg="teal").place(x=100,y=440,width=150)
-        lbl_percentage=Label(self.root,text="Percentage",font=("goudy old style",13,"bold"),bg="teal").place(x=100,y=480,width=150)
+        lbl_select=Label(self.root,text="Select Student",font=("goudy old style",13,"bold"),bg="#CD8C95").place(x=100,y=120,width=150)
+        lbl_name=Label(self.root,text="Name",font=("goudy old style",13,"bold"),bg="#CD8C95").place(x=100,y=160,width=150)
+        lbl_course=Label(self.root,text="Course",font=("goudy old style",13,"bold"),bg="#CD8C95").place(x=100,y=200,width=150)
+        lbl_branch=Label(self.root,text="Branch",font=("goudy old style",13,"bold"),bg="#CD8C95").place(x=100,y=240,width=150)
+        lbl_dob=Label(self.root,text="D.O.B",font=("goudy old style",13,"bold"),bg="#CD8C95").place(x=100,y=280,width=150)
+        lbl_mn=Label(self.root,text="Mother's Name",font=("goudy old style",13,"bold"),bg="#CD8C95").place(x=100,y=320,width=150)
+        lbl_pn=Label(self.root,text="Father's Name",font=("goudy old style",13,"bold"),bg="#CD8C95").place(x=100,y=360,width=150)
+        lbl_obt_marks=Label(self.root,text="Obtained Marks",font=("goudy old style",13,"bold"),bg="#CD8C95").place(x=100,y=400,width=150)
+        lbl_total_marks=Label(self.root,text="Total Marks",font=("goudy old style",13,"bold"),bg="#CD8C95").place(x=100,y=440,width=150)
+        lbl_percentage=Label(self.root,text="Percentage",font=("goudy old style",13,"bold"),bg="#CD8C95").place(x=100,y=480,width=150)
         
         txt_roll=Entry(self.root,textvariable=self.var_roll,font=("goudy old style",13),bg='#FAE6FA').place(x=270,y=120,width=120)
         btn_search=Button(self.root,text='Search',font=("goudy old style",13,"bold"),bg="#03a9f4",fg="white",cursor="hand2",command=(self.search)).place(x=400,y=120,width=90,height=25)
