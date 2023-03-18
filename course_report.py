@@ -10,7 +10,7 @@ class creportClass:
         self.root.config(bg="white")
         self.root.focus_force()
 #===title===
-        title=Label(self.root,text="Course Report Details",font=("goudy old style",20,"bold"),bg="#9D3876",fg="#262626").place(x=10,y=15,width=1180,height=50)
+        title=Label(self.root,text="Course Report Details",font=("goudy old style",20,"bold"),bg="#8A360F",fg="#262626").place(x=10,y=15,width=1180,height=50)
 #====variables====
         self.var_course=StringVar()
         self.var_total_candidates=StringVar()
@@ -22,13 +22,13 @@ class creportClass:
 
 
 ##labels
-        lbl_select=Label(self.root,text="Select Course",font=("goudy old style",15,"bold"),bg="teal").place(x=400,y=140,width=150)
-        lbl_total_candidates=Label(self.root,text="Total Candidates",font=("goudy old style",15,"bold"),bg="teal").place(x=400,y=200,width=150)
-        lbl_candidates_passed=Label(self.root,text="Candidates Passed",font=("goudy old style",15,"bold"),bg="teal").place(x=400,y=240,width=150)
-        lbl_failed=Label(self.root,text="Candidates Failed",font=("goudy old style",15,"bold"),bg="teal").place(x=400,y=280,width=150)
-        lbl_avg_marks=Label(self.root,text="Average Marks",font=("goudy old style",15,"bold"),bg="teal").place(x=400,y=340,width=150)
-        lbl_highest_marks=Label(self.root,text="Highest Marks",font=("goudy old style",15,"bold"),bg="teal").place(x=400,y=380,width=150)
-        lbl_lowest_marks=Label(self.root,text="Lowest Marks",font=("goudy old style",15,"bold"),bg="teal").place(x=400,y=420,width=150)
+        lbl_select=Label(self.root,text="Select Course",font=("goudy old style",12,"bold"),bg="#CD8C95").place(x=400,y=140,width=150)
+        lbl_total_candidates=Label(self.root,text="Total Candidates",font=("goudy old style",12,"bold"),bg="#CD8C95").place(x=400,y=200,width=150)
+        lbl_candidates_passed=Label(self.root,text="Candidates Passed",font=("goudy old style",12,"bold"),bg="#CD8C95").place(x=400,y=240,width=150)
+        lbl_failed=Label(self.root,text="Candidates Failed",font=("goudy old style",12,"bold"),bg="#CD8C95").place(x=400,y=280,width=150)
+        lbl_avg_marks=Label(self.root,text="Average Marks",font=("goudy old style",12,"bold"),bg="#CD8C95").place(x=400,y=340,width=150)
+        lbl_highest_marks=Label(self.root,text="Highest Marks",font=("goudy old style",12,"bold"),bg="#CD8C95").place(x=400,y=380,width=150)
+        lbl_lowest_marks=Label(self.root,text="Lowest Marks",font=("goudy old style",12,"bold"),bg="#CD8C95").place(x=400,y=420,width=150)
 
 
         txt_course=Entry(self.root,textvariable=self.var_course,font=("goudy old style",15),bg='#FAE6FA').place(x=570,y=140,width=120)
