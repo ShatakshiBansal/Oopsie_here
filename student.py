@@ -50,7 +50,7 @@ class studentClass:
 #column2
         lbl_dob = Label(self.root, text = "D.O.B", font = ("goudy old style", 15, "bold"), bg = "white").place(x = 360, y = 60)
         lbl_contact = Label(self.root, text = "Contact", font = ("goudy old style", 15, "bold"), bg = "white").place(x = 360, y = 100)
-        lbl_admission = Label(self.root, text = "Admission date", font = ("goudy old style", 13, "bold"), bg = "white").place(x = 360, y = 140)
+        lbl_admission = Label(self.root, text = "Adm. date", font = ("goudy old style", 15, "bold"), bg = "white").place(x = 360, y = 140)
         lbl_course = Label(self.root, text = "Course", font = ("goudy old style", 15, "bold"), bg = "white").place(x = 360, y = 180)      
 ##Entry Fields
         txt_dob = Entry(self.root, textvariable = self.var_dob, font = ("goudy old style", 15, "bold"), bg = "#FAE6FA").place(x = 480, y = 60, width = 200)
