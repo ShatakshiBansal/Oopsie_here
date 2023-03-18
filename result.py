@@ -60,32 +60,32 @@ class resultClass:
         obt_marks=Label(self.root,text="Obtained marks",font=("goudy old style",15),bg="orange",fg="#262626").place(x=270,y=190,width=140)
         total_marks=Label(self.root,text="Maximum marks",font=("goudy old style",15),bg="orange",fg="#262626").place(x=420,y=190,width=140)
 
-        lbl_sub1 = Label(self.root, text = "subject 1", font = ("goudy old style", 15, "bold"), bg = "white").place(x = 35, y = 220)
+        lbl_sub1 = Label(self.root, text = "subject 1", font = ("goudy old style", 13, "bold"), bg = "white").place(x = 35, y = 220)
         txt_sub1 = Entry(self.root, textvariable = self.var_sub1, font = ("goudy old style", 15, "bold"), bg = "#FAE6FA",state='readonly').place(x = 120, y = 220, width = 140)
         self.txt_marks1 = Entry(self.root , textvariable=self.marks1,justify=CENTER)
         self.txt_fullmarks1 = Entry(self.root, textvariable=self.totalmarks1,justify=CENTER)
         
-        lbl_sub2 = Label(self.root, text = "subject 2", font = ("goudy old style", 15, "bold"), bg = "white").place(x = 35, y = 250)
+        lbl_sub2 = Label(self.root, text = "subject 2", font = ("goudy old style", 13, "bold"), bg = "white").place(x = 35, y = 250)
         txt_sub2 = Entry(self.root, textvariable = self.var_sub2, font = ("goudy old style", 15, "bold"), bg = "#FAE6FA",state='readonly').place(x = 120, y = 250, width = 140)
         self.txt_marks2 = Entry(self.root, textvariable=self.marks2,justify=CENTER)
         self.txt_fullmarks2 = Entry(self.root, textvariable=self.totalmarks2,justify=CENTER)
 
-        lbl_sub3 = Label(self.root, text = "subject 3", font = ("goudy old style", 15, "bold"), bg = "white").place(x = 35, y = 280)
+        lbl_sub3 = Label(self.root, text = "subject 3", font = ("goudy old style", 13, "bold"), bg = "white").place(x = 35, y = 280)
         txt_sub3 = Entry(self.root, textvariable = self.var_sub3, font = ("goudy old style", 15, "bold"), bg = "#FAE6FA",state='readonly').place(x = 120, y = 280, width = 140)
         self.txt_marks3 = Entry(self.root, textvariable=self.marks3,justify=CENTER)
         self.txt_fullmarks3 = Entry(self.root, textvariable=self.totalmarks3,justify=CENTER)
         
-        lbl_sub4 = Label(self.root, text = "subject 4", font = ("goudy old style", 15, "bold"), bg = "white").place(x = 35, y = 310)
+        lbl_sub4 = Label(self.root, text = "subject 4", font = ("goudy old style", 13, "bold"), bg = "white").place(x = 35, y = 310)
         txt_sub4 = Entry(self.root, textvariable = self.var_sub4, font = ("goudy old style", 15, "bold"), bg = "#FAE6FA",state='readonly').place(x = 120, y = 310, width = 140)
         self.txt_marks4 = Entry(self.root, textvariable=self.marks4 ,justify=CENTER)
         self.txt_fullmarks4 = Entry(self.root, textvariable=self.totalmarks4 ,justify=CENTER)
         
-        lbl_sub5 = Label(self.root, text = "subject 5", font = ("goudy old style", 15, "bold"), bg = "white").place(x = 35, y = 340)
+        lbl_sub5 = Label(self.root, text = "subject 5", font = ("goudy old style", 13, "bold"), bg = "white").place(x = 35, y = 340)
         txt_sub5 = Entry(self.root, textvariable = self.var_sub5, font = ("goudy old style", 15, "bold"), bg = "#FAE6FA",state='readonly').place(x = 120, y = 340, width = 140)
         self.txt_marks5 = Entry(self.root, textvariable=self.marks5 ,justify=CENTER)
         self.txt_fullmarks5 = Entry(self.root, textvariable=self.totalmarks5 ,justify=CENTER)
         
-        lbl_sub6 = Label(self.root, text = "subject 6", font = ("goudy old style", 15, "bold"), bg = "white").place(x = 35, y = 370)
+        lbl_sub6 = Label(self.root, text = "subject 6", font = ("goudy old style", 13, "bold"), bg = "white").place(x = 35, y = 370)
         txt_sub6 = Entry(self.root, textvariable = self.var_sub6, font = ("goudy old style", 15, "bold"), bg = "#FAE6FA",state='readonly').place(x = 120, y = 370, width = 140)
         self.txt_marks6 = Entry(self.root, textvariable=self.marks6 ,justify=CENTER)
         self.txt_fullmarks6 = Entry(self.root, textvariable=self.totalmarks6 ,justify=CENTER)
